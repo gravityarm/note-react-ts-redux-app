@@ -95,7 +95,7 @@ const notesSlice = createSlice({
 
     noteUpdated: {
       reducer(state, action) {
-        const { id, name, created, category, content, dates } = action.payload;
+        const { id, name, created, category, content } = action.payload;
         const existingNote = state.noteItems.find((note) => note.id === id);
         console.log(existingNote);
         if (existingNote) {
